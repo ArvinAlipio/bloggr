@@ -1,7 +1,7 @@
 var express = require("express"),
     app     = express(),
-    bodyParser = require("body-parser");
-
+    bodyParser = require("body-parser"),
+    hbs     = require("hbs");
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -9,9 +9,10 @@ app.set("view engine", "hbs");
 app.use(express.static(__dirname + "/vendor"));
 app.use(express.static(__dirname + "/public"));
 
+hbs.registerPartials(__dirname + "/views/partials");
 
 app.get("/", (req, res)=> {
-    res.render("landing");
+    res.render("login");
 })
 
 app.get("/blogs", (req, res) => {
