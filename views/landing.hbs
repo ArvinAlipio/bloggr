@@ -20,55 +20,23 @@
 
     {{> navigation}}
 
+    <!-- Page Content -->
+    <div id="landing-header">
+      <h1>Welcome to Bloggr!</h1>
+      <a href="/blogs" class="btn btn-lg btn-success">View All Blogs</a>
+    </div>
+
     <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item  " style="background-image: url('https://images.unsplash.com/photo-1536652305665-613afc81d9a4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d37e042481002684c20c245ea2605dc9&auto=format&fit=crop&w=1050&q=80')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>First Slide</h3>
-              <p>This is a description for the first slide.</p>
-            </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1536629445800-4679cfd71c3a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7bf14bdbda5c542f57965f9bb0d34ab7&auto=format&fit=crop&w=1190&q=80')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Second Slide</h3>
-              <p>This is a description for the second slide.</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Third Slide</h3>
-              <p>This is a description for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+      <ul class="slideshow">
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
     </header>
 
-    <!-- Page Content -->
-    <section class="py-5">
-      <div class="container">
-        <h1>Full Slider by Start Bootstrap</h1>
-        <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the
-          <code>full-slider.css</code>
-          file.</p>
-      </div>
-    </section>
+    {{#if error}}
+      <p>{{error}}</p>
+    {{else if success}}
+      <p>{{success}}</p>
+    {{/if}}
 
-{{> footer}}

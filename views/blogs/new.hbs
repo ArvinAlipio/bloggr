@@ -1,0 +1,59 @@
+{{> header}}
+{{> navigation}}
+
+<div class="container">
+
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>New Blog Post</h1>
+          <br>
+          <h4>Post Title</h4>
+          <input type="text" class="form-control" name="blog[title]" id="title" placeholder="Title"/>
+          <hr>
+
+          <h4> Author:</h4>
+          <input type="text" class="form-control" name="blog[author]" id="author" placeholder="Author"/>
+
+          <hr>
+
+          {{!-- <img class="img-fluid rounded" src="http://placehold.it/900x300" alt=""> --}}
+          <h4>Image</h4>
+          <input type="file" class="form-control" name="blog[image]" id="postImage"/>
+
+          <hr>
+
+          <div class="card my-4">
+            <h5 class="card-header">Main Heading:</h5>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <textarea class="form-control" rows="3" name="blog[header]" id="header" placeholder="Main Heading"></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+
+         <div class="card my-4">
+            <h5 class="card-header">Body:</h5>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <textarea class="form-control" rows="3" name="blog[body]" id="header" placeholder="Content"></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        <br>
+
+        </div>
+
+        {{> sidebar}}
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+
+{{> footer}}
